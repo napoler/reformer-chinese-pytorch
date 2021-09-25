@@ -97,7 +97,7 @@ model:
   learning_rate: 0.0001
   full_attn_thres: 128
   from_pretrained: bert-base-chinese
-  batch_size: 128
+  batch_size: 32
   trainfile: ./data/train.pkt
   valfile: ./data/val.pkt
   testfile: ./data/test.pkt
