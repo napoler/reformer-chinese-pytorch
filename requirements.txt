@@ -1,0 +1,6 @@
+torch==1.9.1
+pytorch_lightning==1.4.8
+reformer_pytorch==1.4.3
+transformers==4.10.3
+tqdm==4.62.3
+tkitLr==0.0.0.216325705
