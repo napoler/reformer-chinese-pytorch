@@ -7,7 +7,7 @@ def main():
     tokenizer = BertTokenizer.from_pretrained('bert-base-chinese')
     maxLen=128
     data=[]
-    with open("/mnt/data/dev/github/reformer-chinese-pytorch/data/train/CHIP-STS/CHIP-STS/CHIP-STS_test.json",'r') as f:
+    with open("data/data.txt",'r') as f:
         for line in tqdm(f):
             # print(line)
             data.append(str(line))
