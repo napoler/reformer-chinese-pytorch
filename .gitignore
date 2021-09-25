@@ -25,6 +25,7 @@ share/python-wheels/
 lightning_logs/
 data/
 wandb/
+litGPT/
 *.egg-info/
 .installed.cfg
 *.egg
