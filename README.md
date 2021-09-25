@@ -26,3 +26,12 @@ nano config.yaml
 运行训练
 
 > python trainer.py --config  config/default_config.yaml
+
+
+
+
+# 其他
+
+查看cuda占用
+
+> watch -n 1 nvidia-smi

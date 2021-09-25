@@ -40,7 +40,7 @@ trainer:
   num_nodes: 1
   num_processes: 1
   devices: null
-  gpus: null
+  gpus: 1
   auto_select_gpus: false
   tpu_cores: null
   ipus: null
@@ -56,9 +56,9 @@ trainer:
   max_steps: null
   min_steps: null
   max_time: null
-  limit_train_batches: 1.0
-  limit_val_batches: 1.0
-  limit_test_batches: 1.0
+  limit_train_batches: 1000
+  limit_val_batches: 200
+  limit_test_batches: 200
   limit_predict_batches: 1.0
   val_check_interval: 1.0
   flush_logs_every_n_steps: 100

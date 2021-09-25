@@ -24,6 +24,7 @@ pip-wheel-metadata/
 share/python-wheels/
 lightning_logs/
 data/
+wandb/
 *.egg-info/
 .installed.cfg
 *.egg
