@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 from torch.utils.data import DataLoader, random_split,TensorDataset
 def main():
     tokenizer = BertTokenizer.from_pretrained('bert-base-chinese')
-    maxLen=128
+    maxLen=512
     data=[]
     with open("data/data.txt",'r') as f:
         for line in tqdm(f):

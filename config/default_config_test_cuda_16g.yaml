@@ -3,36 +3,36 @@ trainer:
   logger:
   - class_path: pytorch_lightning.loggers.WandbLogger
     init_args:
-      offline: false
-      project: litGPT
       log_model: false
+      offline: false
       prefix: ''
+      project: "litGPT"
   checkpoint_callback: true
   callbacks:
   - class_path: pytorch_lightning.callbacks.EarlyStopping
     init_args:
-      monitor: val_loss
-      min_delta: 0.0
-      patience: 100
-      verbose: true
-      mode: min
-      strict: true
       check_finite: true
       check_on_train_epoch_end: false
+      min_delta: 0.0
+      mode: min
+      monitor: val_loss
+      patience: 100
+      strict: true
+      verbose: true
   - class_path: pytorch_lightning.callbacks.LearningRateMonitor
     init_args:
-      logging_interval: step
       log_momentum: false
+      logging_interval: step
   - class_path: pytorch_lightning.callbacks.ModelCheckpoint
     init_args:
+      auto_insert_metric_name: true
       filename: '{epoch}-{val_loss:.2f}-{val_acc:.2f}'
+      mode: min
       monitor: val_loss
-      verbose: true
       save_last: true
       save_top_k: 2
       save_weights_only: false
-      mode: min
-      auto_insert_metric_name: true
+      verbose: true
   default_root_dir: null
   gradient_clip_val: 0.0
   gradient_clip_algorithm: norm
@@ -97,7 +97,7 @@ model:
   learning_rate: 0.0001
   full_attn_thres: 128
   from_pretrained: bert-base-chinese
-  batch_size: 2
+  batch_size: 128
   trainfile: ./data/train.pkt
   valfile: ./data/val.pkt
   testfile: ./data/test.pkt
