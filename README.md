@@ -89,3 +89,10 @@ with open("default_config.yaml", 'r') as stream:
         yaml.dump(conf, stream)
 
 ```
+
+
+Tks：
+
+https://github.com/lucidrains/reformer-pytorch
+https://huggingface.co/transformers
+https://pytorch-lightning.readthedocs.io/
